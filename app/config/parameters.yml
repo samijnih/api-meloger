@@ -1,0 +1,37 @@
+parameters:
+    project_path: %env(PROJECT_PATH)%
+    app_path: %project_path%/%env(APP_DIR)%
+    config_path: %project_path%/%env(CONFIG_DIR)%
+    twig_path: %project_path%/templates
+    twig_cache_path: %project_path%/var/cache/twig
+
+    app_name: Me Loger
+    app_locale: fr
+    app_fallback_locale: en
+    app_timezone: Europe/Paris
+    app_url: http://api.meloger.fr
+
+    database_driver: pdo_mysql
+    database_host: 192.168.99.101
+    database_port: 3306
+    database_name: meloger
+    database_user: meloger
+    database_password: T6ynzKwKF87XT7v2
+    database_charset: utf8
+
+    doctrine:
+        migrations:
+            directory: %app_path%/doctrine/migrations
+            name: Me Loger
+            namespace: Migrations
+            table_name: migrations
+
+    redis_host: 192.168.99.101
+    redis_password:
+    redis_port: 6379
+    redis_tcp: tcp://%redis_host%:%redis_port%
+
+    selenium_port: 4444
+    selenium:
+        url: %app_url%:%selenium_port%/wd/hub
+        screenshot_path: %project_path%/var/logs/screenshots/

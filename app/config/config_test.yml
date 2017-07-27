@@ -1,0 +1,6 @@
+imports:
+    - { resource: config_dev.yml }
+
+parameters:
+    database_name: meloger_test
+    database_user: meloger_test

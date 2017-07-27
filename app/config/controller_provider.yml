@@ -1,0 +1,2 @@
+parameters:
+    user.class: Providers\Controllers\UserControllerProvider

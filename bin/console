@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+set_time_limit(0);
+putenv('PROJECT_PATH=/var/www/api');
+
+$input = new Symfony\Component\Console\Input\ArgvInput();
+$env = $input->getParameterOption(array('--env', '-e'), 'dev');
+
+putenv('APP_ENV='.$env);
+
+$app = require_once __DIR__.'/../app/bootstrap.php';
+$console = require __DIR__.'/../src/console.php';
+$console->run();

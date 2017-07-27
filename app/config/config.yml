@@ -1,0 +1,7 @@
+imports:
+    - { resource: parameters.yml }
+
+parameters:
+    twig.path: [ %twig_path% ]
+    twig.options:
+        cache: %twig_cache_path%

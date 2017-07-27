@@ -1,0 +1,10 @@
+imports:
+    - { resource: config.yml }
+
+parameters:
+    debug: true
+    monolog:
+        logfile: %project_path%/var/logs/silex_dev.log
+        level: critical
+    profiler:
+        cache_dir: %project_path%/var/cache/profiler
