@@ -129,7 +129,7 @@ class SeLogerService
      */
     public function screenshot() : void
     {
-        $pictureName = date('h:i:s').'.png';
+        $pictureName = date('H:i:s').'.png';
 
         $this->driver->takeScreenshot(
             $this->config['selenium']['screenshot_path'].$pictureName
